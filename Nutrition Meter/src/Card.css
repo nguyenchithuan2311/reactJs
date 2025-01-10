@@ -1,0 +1,12 @@
+.card
+{
+    width: 18%;
+    height: 220px;
+    border: 2px red solid;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+.card>h2,.card>p
+{
+    margin: 10px 30px;
+}

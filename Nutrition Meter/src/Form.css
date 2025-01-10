@@ -1,0 +1,61 @@
+.title
+{
+    margin-left: 25%;
+}
+.container
+{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: 300px;
+}
+.column
+{
+    flex: 1;
+    margin-left: 3%;
+}
+.field
+{
+    width: 90%;
+    margin-top: 5%;
+    height: 15%;
+    background-color: azure;
+    color: black;
+    border-radius: 10px;
+    padding-left: 3%;
+}
+.container-button
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+.AddItem,.ClearAll
+{
+    margin-left: 3%;
+    height: 100%;
+    width: 44.3%;
+}
+.AddItem
+{
+    background-color: #2980b9;
+    color: white;
+}
+.ClearAll
+{
+    margin-left: 5.7%;
+    background-color: #e74c3c;
+    color: white;
+}
+
+.items-list{
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các phần tử trong container bẻ gập sang hàng dưới khi không đủ không gian */
+    gap: 16px; /* Khoảng cách giữa các phần tử */
+    justify-content: flex-start; /* Căn các phần tử từ trái sang phải */
+}
+
+.summary
+{
+    justify-items: center;
+}
