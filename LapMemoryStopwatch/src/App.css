@@ -1,0 +1,104 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+.background {
+  width: 100%;
+  /* min-height: 500px; */
+  background-color: white;
+  border-radius: 20px; /* Bo góc 5% */
+  box-shadow: 3px 3px 5px #888888; /* Tăng độ rõ ràng của bóng */
+  display: block;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  padding: 20px
+}
+
+.clock {
+  width: 80%; /* Chiều rộng là 80% của phần tử cha */
+  height: 10%; /* Chiều cao của phần tử */
+  background-color: white;
+  border-radius: 10px; /* Bo góc 10px */
+  box-shadow: 2px 2px 5px #888888; /* Giảm độ lớn của bóng */
+  display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+  justify-content: center;
+  align-items: center;
+}
+
+.clock > h2 {
+  color: black; /* Màu chữ đen */
+  font-size: 1.5rem; /* Cỡ chữ hợp lý */
+  margin: 0; /* Loại bỏ margin mặc định */
+}
+
+.container-button
+{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.7rem;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px; /* Thêm đệm cho nút */
+  border: none;
+}
+
+.container-button>button
+{
+  display: flex;
+  width: 80px;
+  height: 30px;
+  background-color: #1d9bf0;
+  color: #fff;
+  cursor: pointer;
+  justify-content: center;
+  padding: 0;
+  padding-top: 2px;
+  justify-content: center;
+  align-items: center;
+}
+.title
+{
+  display: flex;
+}
+
+.title>h2{
+  color: black;
+}
+.container-items
+{
+
+  display: block;
+  top: 40%;
+  left: 10%;
+}
+.items {
+  display: flex; /* Dùng flex để căn giữa các phần tử con theo chiều ngang */
+  color: #888888;
+  gap: 6.5rem; /* Khoảng cách giữa các phần tử */
+}
+
+.Time
+{
+  margin-left: 140px;
+}
+
+.Lap
+{
+  margin-left: 20px;
+}
+.TotalTime
+{
+  margin-left: 90px;
+}
+.LapName
+{
+  width: 70px;
+}
