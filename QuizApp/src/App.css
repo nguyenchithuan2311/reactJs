@@ -1,0 +1,73 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.container-answer-detail
+{
+  text-align: left;
+  margin-left: 80px;
+}
+.submit-button
+{
+  margin-top: 30px;
+  cursor: pointer;
+  background-color: #4caf50; /* Màu nền ban đầu */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049; /* Thay đổi màu nền khi hover */
+  color: #fff; /* Màu chữ */
+  transform: scale(1.1); /* Hiệu ứng thu phóng */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng mờ */
+}
+
+.submit-button:active {
+  transform: scale(0.95); /* Giảm kích thước nhẹ khi nhấn */
+  background-color: #388e3c; /* Đổi màu nền khi nhấn */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Giảm bóng mờ khi nhấn */
+}
