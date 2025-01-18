@@ -1,0 +1,41 @@
+.container-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures proper spacing between items */
+    margin: 10px auto;
+    border: 2px solid red;
+    width: 50%; /* Adjust width for smaller screens */
+    
+    padding: 5px; /* Add internal spacing */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.container-row > h3 {
+    margin: 0; /* Reset default margins */
+    padding-left: 10px;
+    flex: 1; /* Allows h3 to take up available space */
+    text-align: left; /* Align text to the left */
+}
+
+.container-row > button {
+    margin-left: 1%; /* Push the button to the right */
+    padding: 5px 10px; /* Add some padding for better usability */
+    font-size: 1rem; /* Ensure button text scales appropriately */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 480px) {
+    .container-row {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: stretch; /* Ensure full-width items */
+        width: 95%; /* Adjust container width */
+    }
+
+    .container-row > h3 {
+        margin-bottom: 10px; /* Add spacing between stacked items */
+    }
+
+    .container-row > button {
+        margin-left: 0; /* Reset margin for stacked layout */
+    }
+}
