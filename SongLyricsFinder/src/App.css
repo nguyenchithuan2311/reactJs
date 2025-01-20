@@ -1,0 +1,25 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title
+{
+  color: red;
+}
+
+.container-search
+{
+  
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin-left: 7%;
+}
+
+.container-search>input
+{
+  margin: 0 10px;
+}
