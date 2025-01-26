@@ -9,12 +9,15 @@ import Crypto from './Crypto.jsx'
 function App() {
   const [count, setCount] = useState(0)
   const [data,setData] = useState([])
+  const [prevPage, setPrevPage] = useState(false)
+  const [nextPage, setNextPage] = useState(true)
+  const [pageNumber, setPageNumber] = useState(1)
 
   useEffect(() => {
     const options = {
       method: 'GET',
       url: 'https://openapiv1.coinstats.app/coins',
-      params: {page: '1', limit: '20', currency: 'usd'},
+      params: {page: pageNumber.toString(), limit: '20', currency: 'usd'},
       headers: {
         accept: 'application/json',
         'X-API-KEY': '3iNLrEwLf/0lSJcwUVahO1zdho1kUcggDDKfann0v/4='
@@ -23,10 +26,22 @@ function App() {
     
     axios
       .request(options)
-      .then(res => setData(res.data.result))
+      .then(res => {setData(res.data.result)
+        setNextPage(res.data.meta.hasNextPage)
+        setPrevPage(res.data.meta.hasPreviousPage)
+        setPageNumber(res.data.meta.page)
+      })
       .catch(err => console.error(err));
     
-  }, [])
+  }, [pageNumber])
+
+  const handleNextPage = () => {
+    setPageNumber(currentPage => (currentPage+1))
+  }
+
+  const handlePrevPage = () => {
+    setPageNumber(currentPage => (currentPage-1))
+  }
   return (
     <>
       <h1>All Cryptocurrencies</h1>
@@ -47,6 +62,9 @@ function App() {
         Volume= {value.volume}>
         </Crypto>
       })}
+      <button className="prev" onClick={handlePrevPage} disabled={!prevPage}>Prev</button>
+      <button className='page-number'>{pageNumber}</button>
+      <button className="next" onClick={handleNextPage} disabled={!nextPage}>Next</button>
     </>
   )
 }

@@ -52,6 +52,8 @@
 {
   display: flex;
   margin-bottom: 1%;
+  margin-top: 2%;
+  height: 100px;
 }
 
 .rank{
@@ -110,5 +112,10 @@
 .volume-title
 {
   margin-right: 15px;
+}
+
+.prev,.page-number
+{
+  margin-right: 10px;
 }
 
